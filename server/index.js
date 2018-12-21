@@ -11,6 +11,10 @@ app.get('/', (req, res) => {
   res.send('Serving')
 });
 
-app.get('/api/')
+app.get('/api/item', (req, res) => {
+	db.getAllReviews((err, results) => {
+		err ? res.status(404).send(err) : res.send(err, results);
+	})
+})
 
 app.listen(port, () => console.log(`listening on port ${port}`));
