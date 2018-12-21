@@ -1,13 +1,13 @@
-# Project Name
+# FEC Target Clone
 
-> Project description
+> Target Item Page Reviews Module.
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/FEC-Plato/Prodcut-Info-Pre-Checkout
+  - https://github.com/FEC-Plato/RecommendedProductsModule
+  - https://github.com/FEC-Plato/Main-Photo-Carousel
+  - https://github.com/FEC-Plato/ReviewsModule
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@
 
 ## Usage
 
-> Some usage instructions
+> BE careful. 5 stars.
 
 ## Requirements
 
