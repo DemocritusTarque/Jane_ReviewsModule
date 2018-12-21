@@ -7,7 +7,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>REACTING</div>
+      <div>REACTING!!!</div>
     )
   }
 }

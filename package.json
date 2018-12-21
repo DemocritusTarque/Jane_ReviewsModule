@@ -8,9 +8,9 @@
     "node": ">=6.13.0"
   },
   "repository": {
-  "type": "git",
-  "url": "https://github.com/Roleary1203/ReviewsModule.git"
-},
+    "type": "git",
+    "url": "https://github.com/Roleary1203/ReviewsModule.git"
+  },
   "scripts": {
     "start": "nodemon server/index.js",
     "build": "webpack -d --watch"
