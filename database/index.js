@@ -9,4 +9,10 @@ var db = mysql.createConnection({
 
 db.connect(err => err ? console.log('db error', err) : console.log('db connected'));
 
-module.exports = { db }
+var getAllReviews = (callback) => {
+	db.query('SELECT * FROM reviews', (err, results) => {
+		err ? console.log('DB Get error', err) : callback(results);
+	})
+} 
+
+module.exports = { db, getAllReviews }
