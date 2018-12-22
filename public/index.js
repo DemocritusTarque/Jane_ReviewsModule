@@ -1,1 +1,0 @@
-export FilledStar from './filledstar.png'

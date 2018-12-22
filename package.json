@@ -12,6 +12,7 @@
     "url": "https://github.com/Roleary1203/ReviewsModule.git"
   },
   "scripts": {
+    "test": "jest",
     "start": "nodemon server/index.js",
     "build": "webpack -d --watch",
     "seed": "mysql -u root < schema.sql"
@@ -23,6 +24,7 @@
     "babel-loader": "^8.0.4",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "jest": "^23.6.0",
     "mysql": "^2.16.0",
     "nodemon": "^1.18.9",
     "react": "^16.7.0",

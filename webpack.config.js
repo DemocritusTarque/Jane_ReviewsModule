@@ -11,11 +11,21 @@ module.exports = {
             presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }
-      }
+      },
+       {
+        test: [/\.png$/],
+        exclude: /node_modules/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 25000
+          }
+        }
+       }
     ]
   },
   output: {
     filename: 'bundle.js',
     path: __dirname + '/public'
   }
-};
+}
