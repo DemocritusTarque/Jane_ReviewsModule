@@ -1,4 +1,5 @@
 import React from 'react';
+import TopComponent from './TopComponent.jsx'
 
 class App extends React.Component {
   constructor(props) {
@@ -22,9 +23,12 @@ class App extends React.Component {
 
   render() {
     return (
+      <div className="reviews-container">
+      <TopComponent reviews={this.state.reviews} />
       <div>{this.state.reviews.map((review, index) => {
-      	return <div key={index}>{review.Title}</div>
+      	return <div key={index}></div>
       })}</div>
+      </div>
     )
   }
 }
