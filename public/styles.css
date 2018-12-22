@@ -1,0 +1,17 @@
+html {
+	font-family: Targetica, "Helvetica Neue", Helvetica, "Neue Montreal", Arial, sans-serif;
+
+}
+
+.reviews-container {
+	position: relative;
+	text-align: center;
+	height: 90%;
+	width: 90%;
+	border-top: solid 3px black;
+	border-bottom: solid 3px black;
+	background-color: ivory;
+	padding: 15px;
+	margin: auto;
+}
+
