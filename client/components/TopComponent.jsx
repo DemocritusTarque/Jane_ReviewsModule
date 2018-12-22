@@ -10,6 +10,11 @@ var TopComponent = (props) => {
 		<React.Fragment>
 		<h1 className="top-text">Ratings & reviews <a href="">{numReviews}</a></h1>
 		<Img src={require('../../public/filledstar.png')} />
+		<Img src={require('../../public/filledstar.png')} />
+		<Img src={require('../../public/filledstar.png')} />
+		<Img src={require('../../public/filledstar.png')} />
+		<Img src={require('../../public/filledstar.png')} />
+
 		</React.Fragment>
 		)
 

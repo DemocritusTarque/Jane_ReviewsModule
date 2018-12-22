@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Roleary1203/ReviewsModule.git"
+    "url": "https://github.com/FEC-Plato/ReviewsModule.git"
   },
   "scripts": {
     "test": "jest",
