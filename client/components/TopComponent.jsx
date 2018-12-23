@@ -8,14 +8,15 @@ var TopComponent = (props) => {
 
 	return ( 
 		<React.Fragment>
-		<h1 className="top-text">Ratings & reviews <a href="">{numReviews}</a></h1>
-		<Img src={require('../../public/filledstar.png')} />
-		<Img src={require('../../public/filledstar.png')} />
-		<Img src={require('../../public/filledstar.png')} />
-		<Img src={require('../../public/filledstar.png')} />
-		<Img src={require('../../public/filledstar.png')} />
-
-		</React.Fragment>
+		<h1>Ratings & reviews <a href="">{numReviews}</a></h1>
+		<div className='star-container'>
+		<Img src={require('../../public/filled.png')} />
+		<Img src={require('../../public/filled.png')} />
+		<Img src={require('../../public/empty.png')} />
+		<Img src={require('../../public/empty.png')} />
+		<Img src={require('../../public/empty.png')} />
+		</div>
+        </React.Fragment>
 		)
 
 }

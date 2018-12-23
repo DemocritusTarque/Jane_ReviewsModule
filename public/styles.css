@@ -11,6 +11,61 @@ html {
 	border-top: solid 3px black;
 	border-bottom: solid 3px black;
 	background-color: ivory;
+	
+}
+
+.star-container {
+	position: relative;
+	width: 200px;
 	margin: auto;
+	bottom: 20px;
+	right: 10px;
+
+}
+
+.button-container {
+
+}
+
+button {
+	font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    white-space: nowrap;
+    user-select: none;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.42857;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border-color: rgb(204, 0, 0);
+}
+
+.write {
+background-color: rgb(204, 0, 0);
+border-color: rgb(204, 0, 0);
+color: rgb(255, 255, 255);
+}
+
+.write:hover {
+background-color: #a8140f;
+}
+
+.see {
+background-color: white;
+border-color: rgb(136,136,136);
+color: black;
+}
+
+.see:hover {
+background-color: #f7f5f3;
+border-color: black;
 }
 

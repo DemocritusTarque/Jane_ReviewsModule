@@ -1,5 +1,6 @@
 import React from 'react';
-import TopComponent from './TopComponent.jsx'
+import TopComponent from './topComponent.jsx';
+import BottomComponent from './bottomComponent.jsx'
 
 class App extends React.Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class App extends React.Component {
       <div>{this.state.reviews.map((review, index) => {
       	return <div key={index}></div>
       })}</div>
+      <BottomComponent />
       </div>
     )
   }
