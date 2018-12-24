@@ -1,6 +1,7 @@
 import React from 'react';
 import TopComponent from './topComponent.jsx';
 import BottomComponent from './bottomComponent.jsx'
+import PositiveReviews from './positiveReviews.jsx'
 
 class App extends React.Component {
   constructor(props) {
@@ -24,11 +25,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="reviews-container">
+      <div className="module-container">
       <TopComponent reviews={this.state.reviews} />
-      <div>{this.state.reviews.map((review, index) => {
-      	return <div key={index}></div>
-      })}</div>
+      <PositiveReviews reviews={this.state.reviews} />
       <BottomComponent />
       </div>
     )

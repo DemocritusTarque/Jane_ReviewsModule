@@ -1,16 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 html {
 	font-family: Targetica, "Helvetica Neue", Helvetica, "Neue Montreal", Arial, sans-serif;
 
 }
 
-.reviews-container {
+a {
+	color: grey;
+}
+
+.module-container {
 	position: relative;
 	text-align: center;
-	height: 90%;
+	height: auto;
 	width: 90%;
 	border-top: solid 3px black;
 	border-bottom: solid 3px black;
 	background-color: ivory;
+	left: 5%;
 	
 }
 
@@ -18,13 +28,52 @@ html {
 	position: relative;
 	width: 200px;
 	margin: auto;
-	bottom: 20px;
 	right: 10px;
 
 }
 
+.small-star {
+	position: relative;
+	height: 15px;
+	width: 15px;
+	
+}
+
 .button-container {
 
+}
+
+.reviews-container {
+	border: solid 1px green;
+	text-align: left;
+	height: auto;
+	position: relative;
+    margin: 5px;
+    line-height: 1.7em;
+
+}
+
+.review-box {
+	width: 45%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 1.4285em;
+	
+    border: solid 1px black;
+	font-size: 14px;
+	
+
+}
+
+.username-date {
+	position: relative;
+	left: 5px;
+	color: rgb(102,102,102);
+
+}
+
+.left-text {
+	text-align: left;
 }
 
 button {
@@ -68,4 +117,6 @@ color: black;
 background-color: #f7f5f3;
 border-color: black;
 }
+
+ v
 

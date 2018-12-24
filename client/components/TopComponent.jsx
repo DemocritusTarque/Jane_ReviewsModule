@@ -16,7 +16,7 @@ var TopComponent = (props) => {
 		<Img src={require('../../public/empty.png')} />
 		<Img src={require('../../public/empty.png')} />
 		</div>
-        </React.Fragment>
+       </React.Fragment>
 		)
 
 }

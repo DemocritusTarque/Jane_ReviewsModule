@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 
 app.get('/api/item', (req, res) => {
 	db.getAllReviews((err, results) => {
-		err ? res.status(404).send(err) : res.status(200).send(results);
+		err ? res.send(err) : res.status(200).send(results);
 	})
 })
 
