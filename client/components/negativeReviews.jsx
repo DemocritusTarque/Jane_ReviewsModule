@@ -4,7 +4,7 @@ import Helpful from './helpful.jsx';
 import Stars from './stars.jsx'
 import Img from 'react-image';
 
-class PositiveReviews extends React.Component {
+class NegativeReviews extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -14,11 +14,18 @@ class PositiveReviews extends React.Component {
 
     stars() {
     let starsarr = [];
-    
-    for (var i = 0; i < 5; i++) {
+    let Stars = this.props.review.Stars
+    for (var i = 0; i < Stars; i++) {
       starsarr.push(<Img key={i} className='small-star' src={require('../../public/filled.png')} />)
-  }
-    return starsarr;
+  } 
+    if (starsarr.length === 5) {
+      return starsarr;
+    } else {
+      for (var i = starsarr.length - 1; i < 5; i++) {
+        starsarr.push(<Img key={i} className='small-star' src={require('../../public/empty.png')} />)
+      }
+      return starsarr;
+    }
   }
 
   render() {
@@ -27,7 +34,7 @@ class PositiveReviews extends React.Component {
       <React.Fragment>
         <div className="review-container">
         <h3>{this.props.review.Title}</h3>
-        <h4>(would recommend)</h4>
+        <h4>(would not recommend)</h4>
         <Stars stars={this.stars()} 
                User={this.state.review.Username}
                Date={this.state.review.Date} />
@@ -40,4 +47,4 @@ class PositiveReviews extends React.Component {
  }
 }
 
-export default PositiveReviews;
+export default NegativeReviews;

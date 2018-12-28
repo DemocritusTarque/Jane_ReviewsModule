@@ -10,11 +10,11 @@ var TopComponent = (props) => {
 		<React.Fragment>
 		<h1>Ratings & reviews <a href="">{numReviews}</a></h1>
 		<div className='star-container'>
-		<Img src={require('../../public/filled.png')} />
-		<Img src={require('../../public/filled.png')} />
-		<Img src={require('../../public/empty.png')} />
-		<Img src={require('../../public/empty.png')} />
-		<Img src={require('../../public/empty.png')} />
+		<Img className='t-s'src={require('../../public/filled.png')} />
+		<Img className='t-s'src={require('../../public/filled.png')} />
+		<Img className='t-s'src={require('../../public/filled.png')} />
+		<Img className='t-s'src={require('../../public/filled.png')} />
+		<Img className='t-s'src={require('../../public/empty.png')} />
 		</div>
        </React.Fragment>
 		)
