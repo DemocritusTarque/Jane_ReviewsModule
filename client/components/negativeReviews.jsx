@@ -16,13 +16,13 @@ class NegativeReviews extends React.Component {
     let starsarr = [];
     let Stars = this.props.review.Stars
     for (var i = 0; i < Stars; i++) {
-      starsarr.push(<Img key={i} className='small-star' src={require('../../public/filled.png')} />)
+      starsarr.push(<Img key={'negstarF' + i} className='small-star' src={require('../../public/filled.png')} />)
   } 
     if (starsarr.length === 5) {
       return starsarr;
     } else {
       for (var i = starsarr.length - 1; i < 5; i++) {
-        starsarr.push(<Img key={i} className='small-star' src={require('../../public/empty.png')} />)
+        starsarr.push(<Img key={'negstarE' + i } className='small-star' src={require('../../public/empty.png')} />)
       }
       return starsarr;
     }

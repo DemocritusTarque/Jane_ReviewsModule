@@ -69,17 +69,19 @@ b.sort(compare2)
   	fetch('/api/item')
   	.then(res => res.json())
   	.then(data => {
+
       this.sortHighest(data)
       let top = this.getFirstFour(data)
+      
       this.sortLowest(data)
-      console.log(data)
       let bot = this.getFirstFour(data)
-      console.log(bot)
+      
   		this.setState({
   			reviews: data,
         topFour: top,
         botFour: bot
   		})
+      
   	})
   	.catch(err => console.log(err))
   }
@@ -97,7 +99,7 @@ b.sort(compare2)
             <div className="reviews">
 
             {this.state.topFour.map((review,index) => {
-              return <PositiveReviews review={review} key={index} />
+              return <PositiveReviews review={review} key={'Pos' + index} />
             })
             }
              
@@ -108,7 +110,7 @@ b.sort(compare2)
             <div className="reviews">
 
           {this.state.botFour.map((review,index) => {
-              return <NegativeReviews review={review} key={index} />
+              return <NegativeReviews review={review} key={'Neg' + index} />
             })
             }
 

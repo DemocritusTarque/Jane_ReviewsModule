@@ -14,12 +14,20 @@ class PositiveReviews extends React.Component {
 
     stars() {
     let starsarr = [];
-    
-    for (var i = 0; i < 5; i++) {
-      starsarr.push(<Img key={i} className='small-star' src={require('../../public/filled.png')} />)
+    let Stars = this.props.review.Stars
+    for (var i = 0; i < Stars; i++) {
+      starsarr.push(<Img key={'posstarF' + i} className='small-star' src={require('../../public/filled.png')} />)
+  } 
+    if (starsarr.length === 5) {
+      return starsarr;
+    } else {
+      for (var i = starsarr.length - 1; i < 5; i++) {
+        starsarr.push(<Img key={'posstarE' + i } className='small-star' src={require('../../public/empty.png')} />)
+      }
+      return starsarr;
+    }
   }
-    return starsarr;
-  }
+
 
   render() {
   
