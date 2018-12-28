@@ -14,7 +14,7 @@ var TopComponent = (props) => {
   	}
   	let avg = stars.reduce((a,b) => a + b) / numReviews;
 
-  	console.log(stars)
+  	console.log(stars)//
 
   }
   if(props.reviews) {
