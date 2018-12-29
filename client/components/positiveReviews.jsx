@@ -12,12 +12,12 @@ class PositiveReviews extends React.Component {
     }
   }
 
-    stars() {
+  stars() {
     let starsarr = [];
     let Stars = this.props.review.Stars
     for (var i = 0; i < Stars; i++) {
       starsarr.push(<Img key={'posstarF' + i} className='small-star' src={require('../../public/filled.png')} />)
-  } 
+    } 
     if (starsarr.length === 5) {
       return starsarr;
     } else {
@@ -30,19 +30,17 @@ class PositiveReviews extends React.Component {
 
 
   render() {
-  
     return(
       <React.Fragment>
         <div className="review-container">
-        <h3>{this.props.review.Title}</h3>
-        <h4>(would recommend)</h4>
-        <Stars stars={this.stars()} 
-               User={this.state.review.Username}
-               Date={this.state.review.Date} />
-        <Review review={this.state.review.Review}/>
-        <Helpful review={this.state.review.Upvotes} />
-      
-      </div>
+          <h3>{this.props.review.Title}</h3>
+          <h4>(would recommend)</h4>
+          <Stars stars={this.stars()} 
+          User={this.state.review.Username}
+          Date={this.state.review.Date} />
+          <Review review={this.state.review.Review}/>
+          <Helpful review={this.state.review.Upvotes} />
+        </div>
       </React.Fragment>
   )
  }

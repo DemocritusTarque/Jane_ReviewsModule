@@ -3,19 +3,16 @@ import ReadMoreReact from 'read-more-react';
 
 const Review = (props) => {
 
-
-	return(
-		<React.Fragment>
-		 <div className='review-box'>
-		  <ReadMoreReact text={"" + props.review}                
-		        min={80}
-                ideal={100}
-                max={300} />
-          </div>
-       </React.Fragment>
+  return(
+	  <React.Fragment>
+		  <div className='review-box'>
+		    <ReadMoreReact text={"" + props.review}                
+		      min={80}
+          ideal={100}
+          max={300} />
+      </div>
+    </React.Fragment>
 	)
-
-  
 }
 
 export default Review

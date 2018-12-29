@@ -15,45 +15,48 @@ class App extends React.Component {
     }
   }
    
-   sortHighest(state) {
-        let a = state;
+  sortHighest(state) {
+    let a = state;
     function compare(a,b) {
-  if (a.Upvotes < b.Upvotes)
-    return 1;
-  if (a.Upvotes > b.Upvotes)
-    return -1;
-    return 0;
-}
-function compare2(a,b) {
-  if (a.Stars < b.Stars)
-    return 1;
-  if (a.Stars > b.Stars)
-    return -1;
-  return 0;
-}
-a.sort(compare)
-a.sort(compare2)
+      if (a.Upvotes < b.Upvotes)
+      return 1;
+      if (a.Upvotes > b.Upvotes)
+      return -1;
+      return 0;
+    }
+    
+    function compare2(a,b) {
+      if (a.Stars < b.Stars)
+      return 1;
+      if (a.Stars > b.Stars)
+      return -1;
+      return 0;
+    }
+
+    a.sort(compare)
+    a.sort(compare2)
   }
 
   sortLowest(state) {
-        let b = state;
+    let b = state;
     function compare(a,b) {
-  if (a.Upvotes < b.Upvotes)
-    return 1;
-  if (a.Upvotes > b.Upvotes)
-    return -1;
-    return 0;
-}
-function compare2(a,b) {
-  if (a.Stars < b.Stars)
-    return -1;
-  if (a.Stars > b.Stars)
-    return 1;
-  return 0;
-}
-b.sort(compare)
-b.sort(compare2)
+      if (a.Upvotes < b.Upvotes)
+      return 1;
+      if (a.Upvotes > b.Upvotes)
+      return -1;
+      return 0;
+    }
 
+    function compare2(a,b) {
+      if (a.Stars < b.Stars)
+      return -1;
+      if (a.Stars > b.Stars)
+      return 1;
+      return 0;
+    }
+
+    b.sort(compare)
+    b.sort(compare2)
   }
 
   getFirstFour(array) {
@@ -63,7 +66,6 @@ b.sort(compare2)
     }
     return top
   }
-
 
   componentDidMount() {
   	fetch('/api/item')
@@ -83,14 +85,12 @@ b.sort(compare2)
   		})
       
   	})
-  	.catch(err => console.log(err))
+    .catch(err => console.log(err))
   }
   
  
 
   render() {
-
-    
     return (
       <div className="module-container">
         <TopComponent reviews={this.state.reviews}/>
@@ -99,10 +99,10 @@ b.sort(compare2)
           <h2 className='left-text'>Most helpful positive reviews</h2>
             <div className="reviews">
 
-            {this.state.topFour.map((review,index) => {
-              return <PositiveReviews review={review} key={'Pos' + index} />
-            })
-            }
+              {this.state.topFour.map((review,index) => {
+                return <PositiveReviews review={review} key={'Pos' + index} />
+              })
+              }
              
             </div>
         </div>
@@ -110,14 +110,14 @@ b.sort(compare2)
           <h2 className='left-text'>Most helpful negative reviews</h2>
             <div className="reviews">
 
-          {this.state.botFour.map((review,index) => {
-              return <NegativeReviews review={review} key={'Neg' + index} />
-            })
-            }
+              {this.state.botFour.map((review,index) => {
+                return <NegativeReviews review={review} key={'Neg' + index} />
+              })
+              }
 
             </div>
-          </div>
-          </div>
+        </div>
+        </div>
         <BottomComponent />
       </div>
     )

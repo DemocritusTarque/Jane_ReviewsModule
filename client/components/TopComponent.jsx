@@ -20,7 +20,7 @@ var TopComponent = (props) => {
     let starsarr = [];
     for (let i = 0; i < avg; i++) {
       starsarr.push(<Img key={'topstarF' + i} className='t-s' src={require('../../public/filled.png')} />)
-  } 
+    } 
     if (starsarr.length === 5) {
       return starsarr;
     } else {
@@ -31,18 +31,14 @@ var TopComponent = (props) => {
     }
   }
 
-
-
-
-	return ( 
+  return ( 
 		<React.Fragment>
-		<h1>Ratings & reviews <a href="">{numReviews}</a></h1>
-		<div className='star-container'>
-		{stars()}
-		</div>
-       </React.Fragment>
-		)
-
+		  <h1>Ratings & reviews <a href="">{numReviews}</a></h1>
+		  <div className='star-container'>
+		    {stars()}
+		  </div>
+    </React.Fragment>
+	)
 }
 
 export default TopComponent;
