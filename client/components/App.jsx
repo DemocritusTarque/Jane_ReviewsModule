@@ -93,7 +93,8 @@ b.sort(compare2)
     
     return (
       <div className="module-container">
-        <TopComponent reviews={this.state.reviews} />
+        <TopComponent reviews={this.state.reviews}/>
+        <div className="a-r">
         <div className='pos-r'>
           <h2 className='left-text'>Most helpful positive reviews</h2>
             <div className="reviews">
@@ -115,6 +116,7 @@ b.sort(compare2)
             }
 
             </div>
+          </div>
           </div>
         <BottomComponent />
       </div>

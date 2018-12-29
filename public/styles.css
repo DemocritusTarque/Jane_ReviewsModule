@@ -40,7 +40,7 @@ p {
 	text-align: center;
 	height: auto;
 	width: 80%;
-	height: 100%;
+	
 	border-top: solid 1px grey;
 	border-bottom: solid 1px grey;
 	left: 10%;
@@ -86,11 +86,14 @@ p {
 }
 
 /*REVIEWS*/
+
+.a-r {
+	margin-top: 7px;
+	/*border: solid 1px orange;*/
+}
 .review-container {
 	text-align: left;
-	height: auto;
 	position: relative;
-    margin: 5px;
     line-height: 1.7em;
 }
 
@@ -113,9 +116,8 @@ p {
 }
 
 .reviews {
-	white-space: normal;
-	/*border: solid 1px pink;*/
-	columns: 2
+  columns: 2
+  /*border: solid 1px pink;*/
 }
 
 /*UPVOTE / DOWNVOTE / REPORT SECTION*/
