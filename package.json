@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Roleary1203/ReviewsModule.git"
+    "url": "https://github.com/FEC-Plato/ReviewsModule.git"
   },
   "scripts": {
     "test": "jest",
@@ -25,16 +25,19 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "jest": "^23.6.0",
+    "jquery": "^3.3.1",
+    "jquery-shorten": "^0.3.2",
     "mysql": "^2.16.0",
     "nodemon": "^1.18.9",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-image": "^1.5.1",
+    "read-more-react": "^1.0.6",
     "url-loader": "^1.1.2",
     "webpack": "^4.28.0",
     "webpack-cli": "^3.1.2"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    
   }
 }
