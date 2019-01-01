@@ -1,5 +1,6 @@
 import React from 'react';
 import ReadMoreReact from 'read-more-react';
+//ReadMoreReact adds read more button at text overflow
 
 const Review = (props) => {
 
@@ -17,6 +18,8 @@ const Review = (props) => {
 
 export default Review
 
+
+//original placeholder review
 /*I sure do like to ride dragons across the countryside, one day I was riding an elegent purple dragon named kazoo and he took me over a beautiful water fall
         that had rainbow colored water falling down on sparkley golden rocks and I asked him If I could go down and get a closer look. Kazoo stated that he could not
         for if a Dragon gets near rainbow water and golden sparkle rocks then a giant robot would pop out of thin air and try to paint the dragon a different color and 

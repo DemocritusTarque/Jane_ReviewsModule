@@ -1,6 +1,8 @@
 import React from 'react';
 
-var BottomComponent = (props) => (
+
+
+var BottomButtons = (props) => (
   <React.Fragment>
     <div className="button-container">
       <button className="write">write a review</button>
@@ -10,4 +12,4 @@ var BottomComponent = (props) => (
 
 )
 
-export default BottomComponent;
+export default BottomButtons;

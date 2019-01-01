@@ -11,7 +11,8 @@ class PositiveReviews extends React.Component {
       review: this.props.review
     }
   }
-
+  
+  //renders stars based on rating.
   stars() {
     let starsarr = [];
     let Stars = this.props.review.Stars
@@ -28,7 +29,6 @@ class PositiveReviews extends React.Component {
     }
   }
 
-
   render() {
     return(
       <React.Fragment>
@@ -39,7 +39,7 @@ class PositiveReviews extends React.Component {
           User={this.state.review.Username}
           Date={this.state.review.Date} />
           <Review review={this.state.review.Review}/>
-          <Helpful review={this.state.review.Upvotes} />
+          <Helpful review={this.state.review} />
         </div>
       </React.Fragment>
   )

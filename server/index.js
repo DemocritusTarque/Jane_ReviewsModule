@@ -7,9 +7,11 @@ var port = 3333;
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
+/*
 app.get('/', (req, res) => {
   res.send('Serving')
 });
+*/
 
 app.get('/api/item', (req, res) => {
   db.getAllReviews((err, results) => {
@@ -18,3 +20,5 @@ app.get('/api/item', (req, res) => {
 })
 
 app.listen(port, () => console.log(`listening on port ${port}`));
+
+module.exports = { app }

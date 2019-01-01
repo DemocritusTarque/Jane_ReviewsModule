@@ -1,21 +1,24 @@
 import React from 'react';
 import Img from 'react-image';
 
-
+//Top of component
+//Ratings and Reviews + Big Stars
 
 var TopComponent = (props) => {
+  //count of reviews
   const numReviews = props.reviews.length;
-
-  let arr = [];
+  
+  //collect all the stars and gets the average star rating for all reviews
+  let allStarRatings = [];
   for (let i = 0; i < numReviews; i++) {
-    arr.push(props.reviews[i].Stars)
+    allStarRatings.push(props.reviews[i].Stars)
   }
   let avg = ''
-  if (arr[0]) {
-    avg = Math.floor(arr.reduce((a,b) => a + b) / numReviews)
+  if (allStarRatings[0]) {
+    avg = Math.floor(allStarRatings.reduce((a,b) => a + b) / numReviews)
   }
   
-
+   //renders stars based on rating.
   const stars = () => {
     let starsarr = [];
     for (let i = 0; i < avg; i++) {

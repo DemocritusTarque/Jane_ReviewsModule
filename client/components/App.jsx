@@ -1,6 +1,6 @@
 import React from 'react';
 import TopComponent from './topComponent.jsx';
-import BottomComponent from './bottomComponent.jsx';
+import BottomButtons from './bottomButtons.jsx';
 import PositiveReviews from './positiveReviews.jsx';
 import NegativeReviews from './negativeReviews.jsx';
 
@@ -15,6 +15,7 @@ class App extends React.Component {
     }
   }
    
+  //used to sort data with highest stars/upvotes
   sortHighest(state) {
     let a = state;
     function compare(a,b) {
@@ -37,6 +38,7 @@ class App extends React.Component {
     a.sort(compare2)
   }
 
+  //used to sorta data with lowest stars/ highest upvotes
   sortLowest(state) {
     let b = state;
     function compare(a,b) {
@@ -58,7 +60,9 @@ class App extends React.Component {
     b.sort(compare)
     b.sort(compare2)
   }
+  
 
+  //used to grab the first four reviews in data array
   getFirstFour(array) {
     let top = []
     for (var i = 0; i < 4; i++) {
@@ -67,11 +71,12 @@ class App extends React.Component {
     return top
   }
 
+  //get request for data from database
   componentDidMount() {
   	fetch('/api/item')
   	.then(res => res.json())
   	.then(data => {
-
+      
       this.sortHighest(data)
       let top = this.getFirstFour(data)
       
@@ -118,7 +123,7 @@ class App extends React.Component {
             </div>
         </div>
         </div>
-        <BottomComponent />
+        <BottomButtons />
       </div>
     )
   }
