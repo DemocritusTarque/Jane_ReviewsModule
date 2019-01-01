@@ -17,7 +17,7 @@ db.connect(err =>  {
 		    } else { 
 		        var length = results.length; 
 		        for (var i = 1; i < length + 1; i ++) {
-		          db.query(`UPDATE reviews SET ProductID = ${Math.floor(Math.random() * 100)} WHERE ID = ${i}`, 
+		          db.query(`UPDATE reviews SET ProductID = ${Math.floor((Math.random() * 100) + 1)} WHERE ID = ${i}`, 
 		          (err, results) => {
 		          	err ? console.log(err) : console.log('VICTORY', results);
 		          })
