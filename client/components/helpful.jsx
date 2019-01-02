@@ -8,11 +8,11 @@ const Helpful = (props) => {
       <p className="do-you">Do you find this helpful?</p>
       <div className="vote-container">
         <a className='a' href='#'>yes</a>
-        <p className='a'>{'(' + props.review.Upvotes  + ')'}</p>
+        <p className='a'>{'(' + props.review.upvotes  + ')'}</p>
         <p className='a'>/</p>
 
         <a className='a' href="#">no</a>
-        <p className='a'>{'(' + props.review.Downvotes  + ')'}</p>
+        <p className='a'>{'(' + props.review.downvotes  + ')'}</p>
         <p className='a'>/</p>
 
         <a className='a' href="#">report</a>

@@ -11,7 +11,7 @@ var TopComponent = (props) => {
   //collect all the stars and gets the average star rating for all reviews
   let allStarRatings = [];
   for (let i = 0; i < numReviews; i++) {
-    allStarRatings.push(props.reviews[i].Stars)
+    allStarRatings.push(props.reviews[i].stars)
   }
   let avg = ''
   if (allStarRatings[0]) {

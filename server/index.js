@@ -7,18 +7,27 @@ var port = 3333;
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-/*
+/* 
 app.get('/', (req, res) => {
   res.send('Serving')
 });
 */
 
-app.get('/api/item', (req, res) => {
-  db.getAllReviews((err, results) => {
+app.get('/api/item/33', (req, res) => {
+  db.getProductReviews('33', (err, results) => {
     err ? res.send(err) : res.status(200).send(results);
   })
 })
 
+app.get('/api/item/:id', (req, res) => {
+	let itemID = req.url.slice(10)
+  db.getProductReviews(itemID, (err, results) => {
+    err ? res.send(err) : res.status(200).send(results);
+  })
+})
+
+
+
 app.listen(port, () => console.log(`listening on port ${port}`));
 
-module.exports = { app }
+

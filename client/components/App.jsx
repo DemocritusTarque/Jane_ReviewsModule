@@ -3,6 +3,7 @@ import TopComponent from './topComponent.jsx';
 import BottomButtons from './bottomButtons.jsx';
 import PositiveReviews from './positiveReviews.jsx';
 import NegativeReviews from './negativeReviews.jsx';
+import PHID from './ph-id.jsx'
 
 
 class App extends React.Component {
@@ -13,23 +14,52 @@ class App extends React.Component {
       topFour: [],
       botFour: []
     }
+
+    this.selectProductID = this.selectProductID.bind(this)
+  }
+
+  //get ID from placeholder button and does magic
+  selectProductID(e) {
+    e.preventDefault()
+    var data = new FormData(e.target);
+    var ID = data.get("ID")
+    console.log(ID)
+
+        fetch(`/api/item/${ID}`)
+    .then(res => res.json())
+    .then(data => {
+      
+      this.sortHighest(data)
+      let top = this.getFirstFour(data)
+      
+      this.sortLowest(data)
+      let bot = this.getFirstFour(data)
+      
+      this.setState({
+        reviews: data,
+        topFour: top,
+        botFour: bot
+      })
+      
+    })
+    .catch(err => console.log(err))
   }
    
   //used to sort data with highest stars/upvotes
   sortHighest(state) {
     let a = state;
     function compare(a,b) {
-      if (a.Upvotes < b.Upvotes)
+      if (a.upvotes < b.upvotes)
       return 1;
-      if (a.Upvotes > b.Upvotes)
+      if (a.upvotes > b.upvotes)
       return -1;
       return 0;
     }
     
     function compare2(a,b) {
-      if (a.Stars < b.Stars)
+      if (a.stars < b.stars)
       return 1;
-      if (a.Stars > b.Stars)
+      if (a.stars > b.stars)
       return -1;
       return 0;
     }
@@ -42,17 +72,17 @@ class App extends React.Component {
   sortLowest(state) {
     let b = state;
     function compare(a,b) {
-      if (a.Upvotes < b.Upvotes)
+      if (a.upvotes < b.upvotes)
       return 1;
-      if (a.Upvotes > b.Upvotes)
+      if (a.upvotes > b.upvotes)
       return -1;
       return 0;
     }
 
     function compare2(a,b) {
-      if (a.Stars < b.Stars)
+      if (a.stars < b.stars)
       return -1;
-      if (a.Stars > b.Stars)
+      if (a.stars > b.stars)
       return 1;
       return 0;
     }
@@ -73,7 +103,7 @@ class App extends React.Component {
 
   //get request for data from database
   componentDidMount() {
-  	fetch('/api/item')
+  	fetch('/api/item/33')
   	.then(res => res.json())
   	.then(data => {
       
@@ -98,6 +128,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="module-container">
+        <PHID handleSubmit={this.selectProductID.bind(this)}/>
         <TopComponent reviews={this.state.reviews}/>
         <div className="a-r">
         <div className='pos-r'>
