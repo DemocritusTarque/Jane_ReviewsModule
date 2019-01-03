@@ -65,7 +65,7 @@ p {
 	position: relative;
 	width: 200px;
 	margin: auto;
-	right: 5px;
+	right: 50px;
 	margin-top: 5px;
 }
 
@@ -100,6 +100,7 @@ p {
 	text-align: left;
 	position: relative;
     line-height: 1.7em;
+    width: 95%;
 }
 
 .review-box {
@@ -109,7 +110,8 @@ p {
 	text-overflow: ellipsis;
 	line-height: 1.4285em;
 	font-size: 14px;
-	width: 75%;
+
+	
 }
 /*EACH REVIEW SECTION*/
 .pos-r {
@@ -126,6 +128,8 @@ p {
   column-fill: auto;
   display: grid;
   grid-template-columns: auto auto;
+  width: 95%;
+
 
   /*border: solid 1px pink;*/
 }
