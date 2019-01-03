@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import ReadMoreReact from 'read-more-react';
 //ReadMoreReact adds read more button at text overflow
@@ -9,7 +11,7 @@ const Review = (props) => {
 		  <div className='review-box'>
 		    <ReadMoreReact text={"" + props.review}                
 		      min={80}
-          ideal={100}
+          ideal={180}
           max={300} />
       </div>
     </React.Fragment>

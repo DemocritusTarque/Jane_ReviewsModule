@@ -34,6 +34,11 @@ p {
 
 }
 
+.item-form {
+	position: relative;
+	float: right;
+}
+
 /* HOLDS EVERYTHING */
 .module-container {
 	position: relative;
@@ -104,6 +109,7 @@ p {
 	text-overflow: ellipsis;
 	line-height: 1.4285em;
 	font-size: 14px;
+	width: 75%;
 }
 /*EACH REVIEW SECTION*/
 .pos-r {
@@ -118,7 +124,7 @@ p {
 .reviews {
   columns: 2;
   column-fill: auto;
-    display: grid;
+  display: grid;
   grid-template-columns: auto auto;
 
   /*border: solid 1px pink;*/

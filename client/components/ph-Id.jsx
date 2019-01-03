@@ -8,6 +8,7 @@ class PHID extends React.Component {
 
  render() {
   return (
+  	<div className="item-form">
     <form onSubmit={this.props.handleSubmit}>
       <label>
         ID:
@@ -15,6 +16,7 @@ class PHID extends React.Component {
       </label>
         <input type="submit" value="Submit" />
     </form>
+    </div>
   )
  }
 }

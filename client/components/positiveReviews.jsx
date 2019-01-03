@@ -36,10 +36,10 @@ class PositiveReviews extends React.Component {
           <h3>{this.props.review.title}</h3>
           <h4>(would recommend)</h4>
           <Stars stars={this.stars()} 
-          User={this.state.review.username}
-          Date={this.state.review.date} />
-          <Review review={this.state.review.review}/>
-          <Helpful review={this.state.review} />
+          User={this.props.review.username}
+          Date={this.props.review.date} />
+          <Review review={this.props.review.review}/>
+          <Helpful review={this.props.review} />
         </div>
       </React.Fragment>
   )
