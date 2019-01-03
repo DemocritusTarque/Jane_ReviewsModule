@@ -11,10 +11,11 @@ class PositiveReviews extends React.Component {
       review: this.props.review
     }
   }
-
+  
+  //renders stars based on rating.
   stars() {
     let starsarr = [];
-    let Stars = this.props.review.Stars
+    let Stars = this.props.review.stars
     for (var i = 0; i < Stars; i++) {
       starsarr.push(<Img key={'posstarF' + i} className='small-star' src={require('../../public/filled.png')} />)
     } 
@@ -28,18 +29,17 @@ class PositiveReviews extends React.Component {
     }
   }
 
-
   render() {
     return(
       <React.Fragment>
         <div className="review-container">
-          <h3>{this.props.review.Title}</h3>
+          <h3>{this.props.review.title}</h3>
           <h4>(would recommend)</h4>
           <Stars stars={this.stars()} 
-          User={this.state.review.Username}
-          Date={this.state.review.Date} />
-          <Review review={this.state.review.Review}/>
-          <Helpful review={this.state.review.Upvotes} />
+          User={this.props.review.username}
+          Date={this.props.review.date} />
+          <Review review={this.props.review.review}/>
+          <Helpful review={this.props.review} />
         </div>
       </React.Fragment>
   )

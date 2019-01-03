@@ -34,7 +34,12 @@ p {
 
 }
 
-/* EVERYTHING */
+.item-form {
+	position: relative;
+	float: right;
+}
+
+/* HOLDS EVERYTHING */
 .module-container {
 	position: relative;
 	text-align: center;
@@ -49,7 +54,7 @@ p {
 }
 
 
-/*FOR CATEGORY*/
+/*FOR CATEGORY TITLE*/
 .left-text {
 	text-align: left;
 	font-size: 19px;
@@ -104,8 +109,9 @@ p {
 	text-overflow: ellipsis;
 	line-height: 1.4285em;
 	font-size: 14px;
+	width: 75%;
 }
-/*review section*/
+/*EACH REVIEW SECTION*/
 .pos-r {
 	/*border: solid 1px blue;*/
  }
@@ -116,7 +122,11 @@ p {
 }
 
 .reviews {
-  columns: 2
+  columns: 2;
+  column-fill: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+
   /*border: solid 1px pink;*/
 }
 
@@ -189,5 +199,4 @@ background-color: #f7f5f3;
 border-color: black;
 }
 
- v
 
