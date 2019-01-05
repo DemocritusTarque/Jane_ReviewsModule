@@ -110,6 +110,8 @@ p {
 	text-overflow: ellipsis;
 	line-height: 1.4285em;
 	font-size: 14px;
+	width: 700px;
+	margin-right: 7px;
 
 	
 }
@@ -128,7 +130,7 @@ p {
   column-fill: auto;
   display: grid;
   grid-template-columns: auto auto;
-  width: 95%;
+  width: 90%;
 
 
   /*border: solid 1px pink;*/

@@ -4,18 +4,25 @@ import React from 'react';
 import ReadMoreReact from 'read-more-react';
 //ReadMoreReact adds read more button at text overflow
 
-const Review = (props) => {
-
+class Review extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+    review: this.props.review
+   }
+  }
+  render() {
   return(
 	  <React.Fragment>
 		  <div className='review-box'>
-		    <ReadMoreReact text={"" + props.review}                
+		    <ReadMoreReact text={"" + this.state.review}                
 		      min={80}
           ideal={180}
           max={300} />
       </div>
     </React.Fragment>
 	)
+ }
 }
 
 export default Review
