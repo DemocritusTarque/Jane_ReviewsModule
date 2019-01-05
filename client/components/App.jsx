@@ -103,7 +103,18 @@ class App extends React.Component {
 
   //get request for data from database
   componentDidMount() {
-  	fetch('/api/item/33')
+    var itemId;
+    console.log(window.location.pathname, 'WHAT IT IS')
+    var id = window.location.pathname.slice(1, window.location.pathname.length - 1);
+    if (id) {
+      itemId = Number(id);
+       console.log(typeof id);
+       console.log(itemId, 'did we reset???')
+    } else {
+      itemId = this.state.id;
+    }
+
+  	fetch(`/api/item/${itemId}`)
   	.then(res => res.json())
   	.then(data => {
       

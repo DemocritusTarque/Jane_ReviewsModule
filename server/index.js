@@ -2,10 +2,12 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var db = require ('../database/index.js');
-var port = 3333;
+var port = 3213;
+var path = require('path');
 
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use('/', express.static('./public/'))
+app.use(/\/\d+\//, express.static('./public/'));
 
 /* 
 app.get('/', (req, res) => {
@@ -13,11 +15,11 @@ app.get('/', (req, res) => {
 });
 */
 
-app.get('/api/item/33', (req, res) => {
-  db.getProductReviews('33', (err, results) => {
+/*app.get('/api/item/1', (req, res) => {
+  db.getProductReviews('1', (err, results) => {
     err ? res.send(err) : res.status(200).send(results);
   })
-})
+})*/
 
 app.get('/api/item/:id', (req, res) => {
 	let itemID = req.url.slice(10)
