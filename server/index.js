@@ -6,7 +6,7 @@ var port = 3003;
 var path = require('path');
 var cors = require('cors');
 
-app.use(cors());
+app.use(cors())
 app.use(bodyParser.json());
 app.use('/', express.static('./public/'));
 app.use(/\/\d+\//, express.static('./public/'));
@@ -16,7 +16,6 @@ app.get('/', (req, res) => {
   res.send('Serving')
 });
 */
-
 /*app.get('/api/item/1', (req, res) => {
   db.getProductReviews('1', (err, results) => {
     err ? res.send(err) : res.status(200).send(results);
