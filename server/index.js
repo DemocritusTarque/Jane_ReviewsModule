@@ -5,6 +5,8 @@ var db = require ('../database/index.js');
 var port = 3213;
 var path = require('path');
 
+//still need cors for proxy
+
 app.use(bodyParser.json());
 app.use('/', express.static('./public/'))
 app.use(/\/\d+\//, express.static('./public/'));

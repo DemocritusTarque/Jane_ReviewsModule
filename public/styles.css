@@ -131,15 +131,12 @@ p {
   display: grid;
   grid-template-columns: auto auto;
   width: 90%;
-
-
   /*border: solid 1px pink;*/
 }
 
 /*UPVOTE / DOWNVOTE / REPORT SECTION*/
 .do-you {
-
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .a {

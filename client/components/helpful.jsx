@@ -13,9 +13,8 @@ constructor(props) {
   }
   
 }
-  //still have to implement incrementing count on click
-    //report button acting like target report button
 
+   //increments upvote or downvote count when clicked
   increment(e) {
     if (e.target.textContent === 'yes' && this.state.upvoted === false && this.state.downvoted === false ) {
          
@@ -34,6 +33,7 @@ constructor(props) {
     }
   }
 
+  //changes text to reported and color orange
   report(e) {
     var reported = false;
     if (reported === false) {

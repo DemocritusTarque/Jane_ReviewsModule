@@ -106,13 +106,9 @@ class App extends React.Component {
     var itemId;
     console.log(window.location.pathname, 'WHAT IT IS')
     var id = window.location.pathname.slice(1, window.location.pathname.length - 1);
-    if (id) {
-      itemId = Number(id);
-       console.log(typeof id);
-       console.log(itemId, 'did we reset???')
-    } else {
-      itemId = this.state.id;
-    }
+    itemId = Number(id);
+     
+    
 
   	fetch(`/api/item/${itemId}`)
   	.then(res => res.json())

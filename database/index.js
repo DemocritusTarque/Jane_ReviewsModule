@@ -29,13 +29,14 @@ db.connect(err =>  {
 
 	//err ? console.log('db error', err) : console.log('db connected'));
 
-
+//gets all reviews////not used after URL update for proxy
 var getAllReviews = (callback) => {
   db.query('SELECT * FROM reviews', (err, results) => {
     err ? callback(err) : callback(results);
   })
 } 
 
+//gets reviews based on product ID
 var getProductReviews = (productID, callback) => {
   db.query(`SELECT * FROM reviews WHERE productID = ${productID}`, (err, results) => {
     err ? callback(err) : callback(results);

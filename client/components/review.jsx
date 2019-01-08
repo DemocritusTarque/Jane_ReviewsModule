@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ReadMoreReact from 'read-more-react';
-//ReadMoreReact adds read more button at text overflow
+//ReadMoreReact adds read more button at text overflow. pretty buggy
 
 class Review extends React.Component {
   constructor(props) {
