@@ -13,15 +13,13 @@ class Review extends React.Component {
   }
   render() {
   return(
-	  <React.Fragment>
 		  <div className='review-box'>
 		    <ReadMoreReact text={"" + this.state.review}                
 		      min={80}
           ideal={180}
           max={300} />
-      </div>
-    </React.Fragment>
-	)
+      </div> 
+	);
  }
 }
 

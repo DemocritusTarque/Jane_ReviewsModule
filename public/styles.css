@@ -16,8 +16,21 @@ html, body{
     height: 100%;
 }
 
+.topHeader {
+	position:relative;
+	right: -50px;
+	top: -10px;
+}
+
+.item-form {
+	position:relative;
+	right: -20px;
+	top: -10px;
+}
+
 h1 {
 	font-size: 23px;
+	
 }
 
 h3 {
@@ -45,8 +58,6 @@ p {
 	text-align: center;
 	height: auto;
 	width: 80%;
-	
-	border-top: solid 1px grey;
 	border-bottom: solid 1px grey;
 	left: 10%;
 	padding-top: 33px;
@@ -99,8 +110,8 @@ p {
 .review-container {
 	text-align: left;
 	position: relative;
-    line-height: 1.7em;
-    width: 95%;
+  line-height: 1.7em;
+		width: 95%;
 }
 
 .review-box {
