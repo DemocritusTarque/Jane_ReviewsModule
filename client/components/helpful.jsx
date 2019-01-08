@@ -18,28 +18,24 @@ constructor(props) {
 
   increment(e) {
     if (e.target.textContent === 'yes' && this.state.upvoted === false && this.state.downvoted === false ) {
-         
       this.setState({
         upvotes: this.state.upvotes += 1,
         upvoted: true
       })
-       
     } else if (e.target.textContent === 'no' && this.state.downvoted === false && this.state.upvoted === false ) {
-         
       this.setState({
         downvotes: this.state.downvotes += 1,
         downvoted: true
       })
-      
     }
   }
 
   report(e) {
     var reported = false;
     if (reported === false) {
-    e.target.textContent = 'reported'
-    e.target.style.color = 'orange';
-   }
+      e.target.textContent = 'reported'
+      e.target.style.color = 'orange';
+    }
   }
 
 

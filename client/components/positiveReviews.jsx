@@ -31,7 +31,6 @@ class PositiveReviews extends React.Component {
 
   render() {
     return(
-      <React.Fragment>
         <div className="review-container">
           <h3>{this.props.review.title}</h3>
           <h4>(would recommend)</h4>
@@ -41,8 +40,7 @@ class PositiveReviews extends React.Component {
           <Review review={this.props.review.review}/>
           <Helpful review={this.props.review} />
         </div>
-      </React.Fragment>
-  )
+    );
  }
 }
 

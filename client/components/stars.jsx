@@ -6,7 +6,6 @@ import TimeAgo from 'timeago-react';
 const Stars = (props) => {
 	
   return (
-	  <React.Fragment>
       <div className="sud">
         {props.stars}
         <span className='username-date'>
@@ -16,8 +15,7 @@ const Stars = (props) => {
           />
         </span>
       </div>
-    </React.Fragment>
-  )
+  );
 }
 
 export default Stars;

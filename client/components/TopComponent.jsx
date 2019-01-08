@@ -35,13 +35,13 @@ var TopComponent = (props) => {
   }
 
   return ( 
-		<React.Fragment>
-		  <h1>Ratings & reviews <a href="">{numReviews}</a></h1>
-		  <div className='star-container'>
-		    {stars()}
-		  </div>
-    </React.Fragment>
-	)
+      <div class="topHeader"> 
+        <h1>Ratings & reviews <a href="">{numReviews}</a></h1>
+        <div className='star-container'>
+          {stars()}
+        </div>
+      </div>
+	);
 }
 
 export default TopComponent;

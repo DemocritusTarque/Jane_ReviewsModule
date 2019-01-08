@@ -21,7 +21,12 @@ module.exports = {
             limit: 25000
           }
         }
-       }
+       },
+       {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loader: 'style-loader!css-loader',
+      },
     ]
   },
   output: {
