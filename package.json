@@ -15,7 +15,7 @@
     "test": "jest",
     "start": "nodemon server/index.js",
     "build": "webpack -d --watch",
-    "seed": "mysql -u root < schema.sql"
+    "seed": "node database/seed.js"
   },
   "dependencies": {
     "@babel/core": "^7.2.2",
@@ -25,13 +25,16 @@
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
+    "faker": "^4.1.0",
     "identity-obj-proxy": "^3.0.0",
     "jquery": "^3.3.1",
     "jquery-shorten": "^0.3.2",
     "mysql": "^2.16.0",
     "nodemon": "^1.18.9",
     "path": "^0.12.7",
+    "pg": "^7.7.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-image": "^1.5.1",
@@ -39,6 +42,7 @@
     "read-more-react": "^1.0.6",
     "regenerator-runtime": "^0.13.1",
     "request": "^2.88.0",
+    "sequelize": "^4.42.0",
     "timeago-react": "^2.0.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.28.0",
