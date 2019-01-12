@@ -3,4 +3,4 @@ import ReactDOM from 'react-dom';
 import App from './components/app.jsx';
 import css from '../public/styles.css';
 
-ReactDOM.render(<App />, document.getElementById('Reviews'));
+ReactDOM.render(<App />, document.getElementById('app'));

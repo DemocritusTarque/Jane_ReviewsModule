@@ -11,22 +11,17 @@ app.use(bodyParser.json());
 app.use('/', express.static('./public/'));
 app.use(/\/\d+\//, express.static('./public/'));
 
-/* 
-app.get('/', (req, res) => {
-  res.send('Serving')
-});
-*/
-/*app.get('/api/item/1', (req, res) => {
-  db.getProductReviews('1', (err, results) => {
-    err ? res.send(err) : res.status(200).send(results);
-  })
-})*/
-
+// find all records where productId matches itemID from url
 app.get('/api/item/:id', (req, res) => {
   let itemID = req.url.slice(10);
-  db.getProductReviews(itemID, (err, results) => {
-    err ? res.send(err) : res.status(200).send(results);
-  });
+  db.reviews.findAll({
+    where: {
+      productId: itemID
+    }
+  })
+  // do I need data vs data.dataValues
+  .then((data) => { res.send(data.dataValues).status(200) })
+  .catch((error) => { res.send(error).status(500); });
 });
 
 app.listen(port, () => console.log(`listening on port ${port}`));
