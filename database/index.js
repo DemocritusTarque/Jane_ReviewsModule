@@ -13,7 +13,7 @@ db.authenticate()
 const reviews = db.define(
   'reviews',
   {
-    productId: { type: Sequelize.INTEGER },
+    productid: { type: Sequelize.INTEGER },
     title: { type: Sequelize.STRING },
     username: { type: Sequelize.STRING },
     review: { type: Sequelize.STRING },
@@ -31,7 +31,7 @@ db.sync()
   .then(() => { console.log('synced with postgres database'); })
   .catch((error) => { console.error(err0r); });
 
-module.exports = { reviews }
+module.exports = { reviews };
 
 // var mysql = require('mysql')
 
