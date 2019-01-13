@@ -24,3 +24,5 @@ coverage
 build/
 public/bundle.js
 
+# Generated csv's
+database/csvs
