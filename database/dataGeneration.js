@@ -1,29 +1,31 @@
 const faker = require('faker');
-const db = require('./index');
 const fs = require('fs');
-const csv = require('fast-csv');
-const path = require('path');
+let csv = require('fast-csv');
 
-// output file in the same folder
-const filename = path.join(__dirname, 'output.csv');
-const ws = fs.createWriteStream(filename);
+csv = csv.createWriteStream();
+const ws = fs.createWriteStream('output.csv');
 
-// goal is to generate a csv of 10mil. records
+// goal is to generate a csv of 10000000 records
 // chose to work with csv to make sure the data being seeded
 // to both db's are exactly the same. 
-for (var i = 0; i < 1000; i++) {
-  csv.write([
-    [faker.random.number({ min: 1, max: 100 }),
-    faker.lorem.word(),
-    faker.name.findName(),
-    faker.lorem.word(),
-    faker.date.past(),
-    faker.random.number({ min: 1, max: 5 }),
-    faker.random.number({ min: 0, max: 5000 }),
-    faker.random.number({ min: 0, max: 5000 })]
-  ])
-  .pipe(ws);
+for (var i = 0; i < 10e6; i++) {
+  csv.write(
+    {
+      id: i + 1, // might delete this once primaryId is figured out when importing to db
+      productid: faker.random.number({ min: 1, max: 100 }),
+      title: faker.lorem.word(),
+      username: faker.name.findName(),
+      review: faker.lorem.paragraph().slice(0, 250),
+      date: faker.date.past().toString().split(' ').slice(0, 4).join(),
+      stars: faker.random.number({ min: 1, max: 5 }),
+      upvotes: faker.random.number({ min: 0, max: 5000 }),
+      downvotes: faker.random.number({ min: 0, max: 5000 })
+    }
+  )
 }
+
+csv.pipe(ws) ? console.log('success') : console.log('error');
+csv.end();
 
 // create an entry for each item in the db
   // starting with 1000 records first
