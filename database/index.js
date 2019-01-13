@@ -22,9 +22,9 @@ const reviews = db.define(
     upvotes: { type: Sequelize.INTEGER },
     downvotes: { type: Sequelize.INTEGER },
   },
-  // {
-  //   timestamps: false,
-  // }
+  {
+    timestamps: false,
+  }
 );
 
 db.sync()
@@ -33,6 +33,8 @@ db.sync()
 
 module.exports = { reviews };
 
+
+// before refactoring, using mysql
 // var mysql = require('mysql')
 
 // var db = mysql.createConnection({
