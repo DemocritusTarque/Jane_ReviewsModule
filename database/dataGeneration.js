@@ -6,7 +6,7 @@ let ws;
 
 // break the csv files into 10 to generate 10e6 records
 for (var x = 0; x < 20; x++) {
-  var fileName = path.join(__dirname, `output${x}.csv`);
+  var fileName = path.join(__dirname, 'csvs', `output${x}.csv`);
 
   var csvs = csv.createWriteStream();
   ws = fs.createWriteStream(fileName);
