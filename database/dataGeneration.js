@@ -15,7 +15,8 @@ for (var x = 0; x < 20; x++) {
   for (var i = 0; i < 500000; i++) {
     csvs.write({
       // might consider refactoring productid to have a wider range of numbers
-      productid: faker.random.number({ min: 1, max: 100 }),
+        // assume that each product will have about 3000 reviews
+      productid: faker.random.number({ min: 1, max: 3000 }),
       title: faker.lorem.word(),
       username: faker.name.findName(),
       review: faker.lorem.paragraph().slice(0, 250),
