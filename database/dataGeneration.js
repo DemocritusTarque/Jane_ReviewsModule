@@ -11,8 +11,8 @@ for (var x = 0; x < 20; x++) {
   var csvs = csv.createWriteStream();
   ws = fs.createWriteStream(fileName);
 
-  // generates 1e6 records
-  for (var i = 0; i < 50000; i++) {
+  // generates 10e6 records
+  for (var i = 0; i < 500000; i++) {
     csvs.write({
       // might consider refactoring productid to have a wider range of numbers
       productid: faker.random.number({ min: 1, max: 100 }),
