@@ -97,18 +97,15 @@ class App extends React.Component {
     itemId = Number(id);
 
     // refactored to ajax from native fetch method, was getting error with res.json()
-    // ERROR: browser is not rendering with fetched data
     $.ajax({
       method: 'GET',
       url: `http://localhost:3003/api/item/${itemId}`,
       type: 'application/json',
-      success: (data) => {
-        console.log('what is data in react', data);
-        
-        // this.sortHighest(data);
+      success: (data) => {        
+        this.sortHighest(data);
         let top = this.getFirstFour(data);
 
-        // this.sortLowest(data);
+        this.sortLowest(data);
         let bot = this.getFirstFour(data);
 
         this.setState({
@@ -118,29 +115,9 @@ class App extends React.Component {
         });
       },
       error: (error) => {
-        console.error(error);
+        console.error('there was an error', error);
       }
     });
-
-    // fetch(`http://localhost:3003/api/item/${itemId}`)
-    //   .then(res => res.json())
-
-    //   .then(data => {
-    //     console.log('what is res', res)
-    //     console.log('what is data in react', data);
-    //     this.sortHighest(data);
-    //     let top = this.getFirstFour(data);
-
-    //     this.sortLowest(data);
-    //     let bot = this.getFirstFour(data);
-
-    //     this.setState({
-    //       reviews: data,
-    //       topFour: top,
-    //       botFour: bot
-    //     });
-    //   })
-    //   .catch(err => console.log(err));
   }
 
   render() {

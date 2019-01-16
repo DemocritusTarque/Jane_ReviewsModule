@@ -18,12 +18,11 @@ app.get('/api/item/:id', (req, res) => {
   let itemID = req.url.slice(10);
   db.reviews.findAll({
     where: {
-      productId: itemID
+      productid: itemID
     }
   })
-  // do I need data vs data.dataValues
-  .then((data) => { res.send(data.dataValues).status(200) })
-  .catch((error) => { res.send(error).status(500); });
+  .then((data) => { res.send(data).status(200) })
+  .catch((error) => { res.send('there was error fetching data from db').status(500); });
 });
 
 app.listen(port, () => console.log(`listening on port ${port}`));
