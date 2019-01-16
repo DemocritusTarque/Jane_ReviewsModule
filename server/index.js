@@ -1,7 +1,9 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
-var db = require('../database/index.js');
+// change the import depending on mongo vs. postgres
+// var db = require('../database/mongo_index.js');
+var db = require('../database/postgres_index.js');
 var port = 3003;
 var path = require('path');
 var cors = require('cors');
