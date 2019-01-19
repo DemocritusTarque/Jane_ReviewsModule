@@ -1,0 +1,19 @@
+config:
+  target: 'http://localhost:3003'
+  phases:
+    - duration: 60
+      arrivalRate: 100
+  # plugins:
+  #   faker:
+  #     locale: 'en'
+  #     defaultSize: 3000
+  variables: 
+    productIds: [11, 29, 56, 34, 59, 110, 231, 159, 303, 451, 567, 667, 712, 897, 913, 1111, 111, 2131, 2980, 1, 456, 668, 81, 443, 221, 197, 1324, 1567, 2465, 2243, 2109, 1785, 1654, 1982, 2567, 2236, 2385, 2456, 2502, 2551, 2531, 2698, 2605, 2613, 2780, 2951]
+
+scenarios:
+  - flow:
+    - loop:
+      - get:
+          url: "/api/item/{{ productIds }}"
+      count: 1
+    - log: "success {{ productIds }}"
