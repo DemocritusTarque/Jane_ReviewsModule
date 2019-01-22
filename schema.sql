@@ -1,3 +1,5 @@
+-- Seeding script for Postgres. Needs refactoring later to reduce repeated codes.
+
 DROP DATABASE IF EXISTS tarque;
 CREATE DATABASE tarque;
 \c tarque;
