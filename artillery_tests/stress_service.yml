@@ -2,7 +2,7 @@ config:
   target: 'http://localhost:3003'
   phases:
     - duration: 60
-      arrivalRate: 100
+      arrivalRate: 1000
   # plugins:
   #   faker:
   #     locale: 'en'
@@ -12,8 +12,8 @@ config:
 
 scenarios:
   - flow:
-    - loop:
+    # - loop:
       - get:
           url: "/api/item/{{ productIds }}"
-      count: 1
-    - log: "success {{ productIds }}"
+    #   count: 1
+    # - log: "success {{ productIds }}"

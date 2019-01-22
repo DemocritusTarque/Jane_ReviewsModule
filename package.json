@@ -12,7 +12,8 @@
     "url": "https://github.com/FEC-Plato/ReviewsModule.git"
   },
   "scripts": {
-    "test": "jest",
+    "jest": "jest",
+    "artillery": "artillery run stress_service.yml",
     "start": "nodemon server/index.js",
     "build": "webpack -d --watch",
     "data": "node --max-old-space-size=8192 database/dataGeneration.js",

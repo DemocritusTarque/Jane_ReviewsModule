@@ -20,15 +20,18 @@ app.listen(port, () => console.log(`listening on port ${port}`));
 
 // find all records where productId matches itemID from url
 app.get('/api/item/:id', (req, res) => {
-  // let itemID = req.url.slice(10);
   let itemID = req.params.id;
 
-  db.reviews.findAll({
-    where: {
-      productid: itemID
-    }
-  })
-  .then((data) => { res.status(200).send(data); })
+  // db.reviews.findAll({
+  //   where: {
+  //     productid: itemID
+  //   }
+  // })
+  // .then((data) => { res.status(200).send(data); })
+  // .catch((error) => { res.status(500).send('there was error fetching data from db', error); });
+
+  db.db.query(`SELECT * FROM reviews WHERE productid = ${itemID} AND upvotes > 4500 limit 10`)
+  .then((data) => { res.status(200).send(data[0]); })
   .catch((error) => { res.status(500).send('there was error fetching data from db', error); });
 });
 

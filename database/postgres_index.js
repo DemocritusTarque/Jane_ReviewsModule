@@ -31,7 +31,7 @@ db.sync()
   .then(() => { console.log('synced with postgres database'); })
   .catch((error) => { console.error(err0r); });
 
-module.exports = { reviews };
+module.exports = { reviews, db };
 
 
 // before refactoring, using mysql
