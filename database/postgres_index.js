@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
 const db = new Sequelize('tarque', 'janelee', '', {
-  host: 'localhost',
+  host: 'host.docker.internal',
   dialect: 'postgres'
 });
 
