@@ -17,7 +17,7 @@
     "start": "nodemon server/index.js",
     "build": "webpack -d --watch",
     "data": "node --max-old-space-size=8192 database/dataGeneration.js",
-    "seedPg": "psql -U janelee < schema.sql",
+    "seedPg": "psql -U janelee < seedPg.sql",
     "seedMongo": "sh seedMongo.sh"
   },
   "dependencies": {
