@@ -1,4 +1,4 @@
-// require('newrelic');
+require('newrelic');
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
@@ -16,6 +16,10 @@ app.use(/\/\d+\//, express.static('./public/'));
 
 app.listen(port, () => console.log(`listening on port ${port}`));
 
+// verification for loader.io
+app.get('/loaderio-94a334b8e25ed23d3becf04ef8e9b8d5', (req, res) => {
+  res.send('loaderio-94a334b8e25ed23d3becf04ef8e9b8d5');
+});
 
 // find all records where productId matches itemID from url
 app.get('/api/item/:id', (req, res) => {
