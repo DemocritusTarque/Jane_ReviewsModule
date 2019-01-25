@@ -15,7 +15,7 @@
     "jest": "jest",
     "artillery": "artillery run artillery_tests/stress_service.yml",
     "start": "nodemon server/index.js",
-    "build": "webpack",
+    "build": "webpack -d --watch",
     "data": "node --max-old-space-size=8192 database/dataGeneration.js",
     "seedPg": "psql -U janelee < schema.sql",
     "seedMongo": "sh seedMongo.sh"
