@@ -1,7 +1,10 @@
 const Sequelize = require('sequelize');
+const { deployedDB, pgPW } = require('../ec2_config.js');
 
-const db = new Sequelize('tarque', 'janelee', '', {
-  host: 'localhost',
+const db = new Sequelize('tarque', 'postgres', pgPW, {
+  // host: 'localhost',
+  // host: 'host.docker.internal',
+  host: deployedDB,
   dialect: 'postgres'
 });
 

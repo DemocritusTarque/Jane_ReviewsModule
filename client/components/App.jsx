@@ -14,7 +14,6 @@ class App extends React.Component {
       topFour: [],
       botFour: []
     };
-
     this.selectProductID = this.selectProductID.bind(this);
   }
 
@@ -25,7 +24,7 @@ class App extends React.Component {
     var ID = data.get('ID');
     console.log(ID);
 
-    fetch(`http://localhost:3003/api/item/${ID}`)
+    fetch(`/api/item/${ID}`)
       .then(res => res.json())
       .then(data => {
         this.sortHighest(data);
@@ -99,7 +98,7 @@ class App extends React.Component {
     // refactored to ajax from native fetch method, was getting error with res.json()
     $.ajax({
       method: 'GET',
-      url: `http://localhost:3003/api/item/${itemId}`,
+      url: `/api/item/${itemId}`,
       type: 'application/json',
       success: (data) => {        
         this.sortHighest(data);

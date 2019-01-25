@@ -27,6 +27,9 @@ public/bundle.js
 # Generated csv's
 database/csvs
 
-# newrelic key
+# newrelic key & log
 newrelic.js
 newrelic_agent.log
+
+# ec2 config
+ec2_config.js

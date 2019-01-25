@@ -1,4 +1,4 @@
-require('newrelic');
+// require('newrelic');
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
@@ -6,7 +6,6 @@ var app = express();
 // var db = require('../database/mongo_index.js');
 var db = require('../database/postgres_index.js');
 var port = 3003;
-// var path = require('path');
 var cors = require('cors');
 
 app.use(cors())
