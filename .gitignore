@@ -33,3 +33,6 @@ newrelic_agent.log
 
 # ec2 config
 ec2_config.js
+
+# loader.io verification token
+loaderio-94a334b8e25ed23d3becf04ef8e9b8d5.txt
